@@ -14,7 +14,7 @@ const Login = () => {
     try {
       if (isRegister) {
         await register(email, password);
-        alert("Đăng ký tài khoản thành công. Vui lòng đăng nhập để tiếp tục.");
+        alert("Đăng ký tài khoản thành công. Nhấn ok để đăng nhập");
       } else {
         await login(email, password);
         alert("Đăng nhập tài khoản thành công");
@@ -65,7 +65,6 @@ const Login = () => {
                 htmlFor="form2Example1"
                 style={{ display: "block", marginBottom: "5px" }}
               >
-                {/* Email address */}
               </label>
             </div>
 
@@ -88,7 +87,6 @@ const Login = () => {
                 htmlFor="form2Example2"
                 style={{ display: "block", marginBottom: "5px" }}
               >
-                {/* Password */}
               </label>
             </div>
 
@@ -109,7 +107,6 @@ const Login = () => {
             </button>
           </form>
           {error && <p style={{ color: "red" }}>{error}</p>}{" "}
-          {/* Hiển thị lỗi */}
           <button onClick={() => setIsRegister(!isRegister)}>
             {isRegister
               ? "Already have an account? Login"
@@ -117,7 +114,6 @@ const Login = () => {
           </button>
         </div>
       </div>
-      {/* </div> */}
     </div>
   );
 };
